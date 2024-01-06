@@ -85,10 +85,33 @@ export function createMentionUtils(editor: Squire) {
   }
 
   return {
+    /**
+     * Get the text after the `@` mention value nearest to the cursor position
+     */
     getMentionText,
+    /**
+     * Get a web range object that selects the text before the cursor till the `@`
+     */
     getMentionReplacementRange,
+    /**
+     * Get a web range object that selects the text before the cursor till the `@` and also grabs the text after the cursor
+     * Can be used to replace the entire word to a mention tag instead of just the characters before the cursor.
+     */
     unsafe_getMentionReplacementRange,
+
+    /**
+     * Insert the given html at the current mention's location
+     * @param html
+     * @returns
+     */
     insertMention: (html: string) => insertMention(html),
+
+    /**
+     * Insert the given html at the current mention's location while also replacing
+     * the entire word surrounded by the cursor
+     * @param html
+     * @returns
+     */
     unsafe_insertMention: (html: string) => insertMention(html, true),
   };
 }
