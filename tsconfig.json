@@ -16,11 +16,5 @@
     "noUnusedParameters": true,
     "skipLibCheck": true,
     "declaration": true,
-    "baseUrl": ".",
-    "outDir": "dist",
-    "paths": {
-      "squire-rte-mention": ["src"]
-    }
-  },
-  "include": ["./src"]
+  }
 }

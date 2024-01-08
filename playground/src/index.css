@@ -3,13 +3,5 @@
 @tailwind utilities;
 
 .user-item-block {
-  @apply bg-zinc-200 px-1 py-1 rounded-md;
-}
-
-.squire-mention-list {
-  @apply bg-zinc-100;
-}
-
-.squire-mention-list .squire-mention-item {
-  @apply hover:bg-zinc-200 px-2 py-2;
+  @apply bg-zinc-100 px-1 py-1 rounded-md;
 }
